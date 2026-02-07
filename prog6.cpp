@@ -4,11 +4,10 @@ class student{
 	private:
 		int roll;
 		char name[50];
-		
-	public:
 		int m1,m2,m3;
 		int marks;
 		float percentage;
+	public:
 		void input(){
 			cout<<"Enter roll number:";
 			cin>>roll;
@@ -20,11 +19,14 @@ class student{
 			cout<<"Enter your marks:";
 			cin>>m1>>m2>>m3;
 			
-			marks = m1+m2+m3;
-			percentage = float(marks)/300*100;
+			
 			
 			
 		
+		}
+		void calculate(){
+			marks = m1+m2+m3;
+			percentage = float(marks)/300*100;
 		}
 		void output(){
 			cout<<"Roll number = "<<roll<<endl;
@@ -36,5 +38,6 @@ class student{
 int main(){
 	student s;
 	s.input();	
+	s.calculate();
 	s.output();
 }
